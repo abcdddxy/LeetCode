@@ -69,7 +69,7 @@ public class lee17_PhoneNum_medium {
             return queue;
         }
 
-        LinkedList<String> next = new LinkedList<>(); //队列，可以用Queue或LinkedList
+        Queue<String> next = new LinkedList<>(); //队列，可以用Queue或LinkedList
         queue.add("");
 
         for (int i = 0; i < digits.length() && !queue.isEmpty(); ) {
