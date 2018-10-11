@@ -39,7 +39,7 @@ public class lee212_WordSearch2_hard {
         return flag;
     }
 
-    //快速方法，Trie树
+    //快速方法，Trie树（前缀树）
     class Node {
         String word;
         Node[] next = new Node[26];
