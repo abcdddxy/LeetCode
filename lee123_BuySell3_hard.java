@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class lee123_BuySell3_hard {
     public int maxProfit(int[] prices) {
         int len = prices.length;
@@ -16,6 +18,7 @@ public class lee123_BuySell3_hard {
             right[i] = Math.max(right[i + 1], max - prices[i]);
             max = Math.max(max, prices[i]);
         }
+        System.out.println("left = " + Arrays.toString(left) + ", right = " + Arrays.toString(right));
         int ans = 0;
         for (int i = 0; i < len; i++) {
             ans = Math.max(ans, left[i] + right[i]);
@@ -31,7 +34,7 @@ public class lee123_BuySell3_hard {
             sell1 = Math.max(sell1, i + buy1);
             buy2 = Math.max(buy2, sell1 - i);
             sell2 = Math.max(sell2, i + buy2);
-            System.out.println("buy1 = [" + buy1 + "]"+"sell1 = [" + sell1 + "]"+"buy2 = [" + buy2 + "]"+"sell2 = [" + sell2 + "]");
+            System.out.println("buy1 = [" + buy1 + "]" + "sell1 = [" + sell1 + "]" + "buy2 = [" + buy2 + "]" + "sell2 = [" + sell2 + "]");
         }
         return sell2;
     }
