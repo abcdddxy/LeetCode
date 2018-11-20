@@ -35,9 +35,9 @@ public class lee264_UglyNum2_medium {
 
             if (dp[i] == dp[t2] * 2)
                 t2++;
-            else if (dp[i] == dp[t3] * 3)
+            if (dp[i] == dp[t3] * 3)
                 t3++;
-            else if (dp[i] == dp[t5] * 5)
+            if (dp[i] == dp[t5] * 5)
                 t5++;
         }
         return dp[n - 1];
