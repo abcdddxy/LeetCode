@@ -48,15 +48,15 @@ public class lee145_BTPostTraversal_hard {
                 s.push(t);
                 p = p.left;
             }
+            while (!s.isEmpty() && s.peek().tag == 'R') {
+                t = s.pop();
+                ans.add(t.tree.val);
+            }
             if (!s.isEmpty()) {
                 t = s.peek();
                 t.tag = 'R';
                 p = t.tree;
                 p = p.right;
-            }
-            while (!s.isEmpty() && s.peek().tag == 'R') {
-                t = s.pop();
-                ans.add(t.tree.val);
             }
         }
         return ans;
